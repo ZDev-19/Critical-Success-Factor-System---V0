@@ -192,6 +192,12 @@ def crear_input_data(rpt):
 
     return pd.DataFrame.from_dict(input_data)
 
+def mostrar_resultado(resultado):
+    if(resultado == 0):
+        st.text_area("Acorde a los datos otorgados , se calcula que su organizacion no presenta la suficiente \n probabilidad de exito para implementacion formal de seguridad informatica")
+    else:
+        st.text_area("Acorde a los datos otorgados , se calcula que su organizacion presenta la suficiente \n probabilidad de exito para implementacion formal de seguridad informatica")
+
 def main():
     data = load_data()
     X_train, X_test, y_train, y_test , scaler = division_datos(data)
@@ -209,8 +215,7 @@ def main():
 
     prediccion = mejor_modelo.predict(input)
 
-    st.write(input)
-    st.write(prediccion[0])
+    mostrar_resultado(prediccion[0])
 
 if __name__ == "__main__":
     st.title('Calculo de exito de implementacion')
