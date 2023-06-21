@@ -194,9 +194,9 @@ def crear_input_data(rpt):
 
 def mostrar_resultado(resultado):
     if(resultado == 0):
-        st.text_area("Acorde a los datos otorgados , se calcula que su organizacion no presenta la suficiente \n probabilidad de exito para implementacion formal de seguridad informatica")
+        st.text_area("Resultado","Acorde a los datos otorgados , se calcula que su organizacion no presenta la suficiente \n probabilidad de exito para implementacion formal de seguridad informatica")
     else:
-        st.text_area("Acorde a los datos otorgados , se calcula que su organizacion presenta la suficiente \n probabilidad de exito para implementacion formal de seguridad informatica")
+        st.text_area("Resultado","Acorde a los datos otorgados , se calcula que su organizacion presenta la suficiente \n probabilidad de exito para implementacion formal de seguridad informatica")
 
 def main():
     data = load_data()
